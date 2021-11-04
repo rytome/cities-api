@@ -44,13 +44,23 @@ public class StateResourceTest {
 
     }
 
-    @DisplayName("Teste de código inválido")
+    @DisplayName("Valores inválidos - Limite Inferior e Superior")
     @ParameterizedTest
-    @CsvSource({ "0", "30" })
-    public void deveRetornarEstadoNaoEncontrado(Integer codigoEstado) throws Exception {
+    @CsvSource({ "0", "29" })
+    public void deveRetornarErro_ValoresInvalidos(Integer codigoEstado) throws Exception {
         this.mockMvc.perform(get("/states/" + codigoEstado))
                 .andDo(print())
                 .andExpect(status().isNotFound());
+
+    }
+
+    @DisplayName("Valores válidos")
+    @ParameterizedTest
+    @CsvSource({ "1", "27" })
+    public void deveRetornarEstado_ValoresValidos(Integer codigoEstado) throws Exception {
+        this.mockMvc.perform(get("/states/" + codigoEstado))
+                .andDo(print())
+                .andExpect(status().isOk());
 
     }
 }

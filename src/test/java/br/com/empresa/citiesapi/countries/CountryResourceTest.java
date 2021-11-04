@@ -45,15 +45,24 @@ public class CountryResourceTest {
 
     }
 
-    @DisplayName("Teste de código inválido")
+    @DisplayName("Valores inválidos - Limite Inferior e Superior")
     @ParameterizedTest
-    @CsvSource({ "290", "543" })
-    public void deveRetornarPaisNaoEncontrado(Integer codigoPais) throws Exception {
+    @CsvSource({ "0", "264" })
+    public void deveRetornarErro_ValoresInvalidos(Integer codigoPais) throws Exception {
         this.mockMvc.perform(get("/countries/" + codigoPais))
                 .andDo(print())
                 .andExpect(status().isNotFound());
 
     }
 
+    @DisplayName("Valores válidos")
+    @ParameterizedTest
+    @CsvSource({ "1", "263" })
+    public void deveRetornarPais_ValoresValidos(Integer codigoPais) throws Exception {
+        this.mockMvc.perform(get("/countries/" + codigoPais))
+                .andDo(print())
+                .andExpect(status().isOk());
+
+    }
 
 }

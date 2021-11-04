@@ -38,8 +38,8 @@ public class City {
 
     public City() {
     }
-/*
-    public City(final Long id, final String name, final Integer uf, final Integer ibge,
+
+    public City(final Long id, final String name, final State uf, final Integer ibge,
                 final String geolocation, final Point location) {
         this.id = id;
         this.name = name;
@@ -47,7 +47,7 @@ public class City {
         this.ibge = ibge;
         this.geolocation = geolocation;
         this.location = location;
-    }*/
+    }
 
     public Long getId() {
         return id;
