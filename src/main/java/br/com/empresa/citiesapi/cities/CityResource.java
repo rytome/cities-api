@@ -1,5 +1,6 @@
 package br.com.empresa.citiesapi.cities;
 
+import br.com.empresa.citiesapi.cities.repository.CityRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;

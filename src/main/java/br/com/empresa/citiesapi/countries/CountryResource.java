@@ -1,6 +1,5 @@
 package br.com.empresa.citiesapi.countries;
 
-import br.com.empresa.citiesapi.countries.Country;
 import br.com.empresa.citiesapi.countries.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

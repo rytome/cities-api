@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import br.com.empresa.citiesapi.cities.City;
-import br.com.empresa.citiesapi.cities.CityRepository;
+import br.com.empresa.citiesapi.cities.repository.CityRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.geo.Point;

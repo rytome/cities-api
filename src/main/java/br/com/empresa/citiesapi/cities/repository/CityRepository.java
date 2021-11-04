@@ -1,5 +1,6 @@
-package br.com.empresa.citiesapi.cities;
+package br.com.empresa.citiesapi.cities.repository;
 
+import br.com.empresa.citiesapi.cities.City;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -19,7 +19,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.vladmihalcea:hibernate-types-52:2.9.8'
 	implementation 'org.postgresql:postgresql'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'io.rest-assured:rest-assured:4.4.0'
+	implementation 'org.projectlombok:lombok:1.18.22'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'io.rest-assured:spring-mock-mvc'
+
 }
 
 checkstyle{
